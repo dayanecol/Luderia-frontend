@@ -31,10 +31,10 @@ const Header: React.FC = () => {
           </li>
           <li
             className={
-              router.pathname.startsWith("/signup") ? styles.active : ""
+              router.pathname.startsWith("/signin") ? styles.active : ""
             }
           >
-            <Link href="/signup">Cadastro</Link>
+            <Link href="/signin">Login</Link>
           </li>
         </ul>
       </nav>
