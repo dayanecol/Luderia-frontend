@@ -17,13 +17,6 @@ const Header: React.FC = () => {
           </li>
           <li
             className={
-              router.pathname.startsWith("/signup") ? styles.active : ""
-            }
-          >
-            <Link href="/signup">Cadastro</Link>
-          </li>
-          <li
-            className={
               router.pathname.startsWith("/games") ? styles.active : ""
             }
           >
@@ -35,6 +28,13 @@ const Header: React.FC = () => {
             }
           >
             <Link href="/rentals">Locações</Link>
+          </li>
+          <li
+            className={
+              router.pathname.startsWith("/signup") ? styles.active : ""
+            }
+          >
+            <Link href="/signup">Cadastro</Link>
           </li>
         </ul>
       </nav>
