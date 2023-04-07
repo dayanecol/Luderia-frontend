@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import styles from "../styles/components/Auth.module.css";
 import { register } from "../utils/user";
 import { setCookie } from "cookies-next";
+import Link from "next/link";
 
 const Signup = () => {
   const [name, setName] = useState("");
@@ -64,6 +65,9 @@ const Signup = () => {
           Cadastrar
         </button>
       </form>
+      <Link href="/signin">
+        <h6 className={styles.title}>Já possuí uma conta? Entre!</h6>
+      </Link>
     </div>
   );
 };
