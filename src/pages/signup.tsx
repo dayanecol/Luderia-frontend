@@ -24,50 +24,72 @@ const Signup = () => {
   };
 
   return (
-    <div className={styles.container}>
-      <form className={styles.form} onSubmit={handleSubmit}>
-        <h2 className={styles.title}>Cadastre-se</h2>
-        {error && <div className={styles.error}>{error}</div>}
-        <div className={styles.formGroup}>
-          <label htmlFor="name">Nome</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            value={name}
-            onChange={(event) => setName(event.target.value)}
-            required
-          />
-        </div>
-        <div className={styles.formGroup}>
-          <label htmlFor="email">E-mail</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={email}
-            onChange={(event) => setEmail(event.target.value)}
-            required
-          />
-        </div>
-        <div className={styles.formGroup}>
-          <label htmlFor="password">Senha</label>
-          <input
-            type="password"
-            id="password"
-            name="password"
-            value={password}
-            onChange={(event) => setPassword(event.target.value)}
-            required
-          />
-        </div>
-        <button type="submit" className={styles.button}>
-          Cadastrar
-        </button>
-      </form>
-      <Link href="/signin">
-        <h6 className={styles.title}>Já possuí uma conta? Entre!</h6>
-      </Link>
+    <div className={styles.page}>
+      <div className={styles.aside}>
+        <h1 className={styles.text}>É muito fácil se cadastrar!</h1>
+        <h2 className={styles.text}>Crie sua conta agora mesmo!</h2>
+      </div>
+      <div className={styles.container}>
+        <h1 className={styles.title}>Crie sua conta</h1>
+        <form className={styles.form} onSubmit={handleSubmit}>
+          <h2 className={styles.title}>Preencha seus dados:</h2>
+          {error && <div className={styles.error}>{error}</div>}
+          <div className={styles.formGroup}>
+            <input
+              placeholder="Nome"
+              type="text"
+              id="name"
+              name="name"
+              value={name}
+              onChange={(event) => setName(event.target.value)}
+              className={styles.input}
+              required
+            />
+          </div>
+          <div className={styles.formGroup}>
+            <input
+              placeholder="Email"
+              type="email"
+              id="email"
+              name="email"
+              value={email}
+              onChange={(event) => setEmail(event.target.value)}
+              className={styles.input}
+              required
+            />
+          </div>
+          <div className={styles.formGroup}>
+            <input
+              placeholder="Senha"
+              type="password"
+              id="password"
+              name="password"
+              value={password}
+              onChange={(event) => setPassword(event.target.value)}
+              className={styles.input}
+              required
+            />
+          </div>
+          <div className={styles.formGroup}>
+            <input
+              placeholder="Confirme a senha"
+              type="password"
+              id="password"
+              name="password"
+              value={password}
+              onChange={(event) => setPassword(event.target.value)}
+              className={styles.input}
+              required
+            />
+          </div>
+          <button type="submit" className={styles.button}>
+            Cadastrar
+          </button>
+          <Link href="/signin">
+            <h6 className={styles.title}>Já possuí uma conta? Entre!</h6>
+          </Link>
+        </form>
+      </div>
     </div>
   );
 };
