@@ -10,14 +10,21 @@
 .aside {
   width: 15vw;
   height: 60vh;
-  left: 256px;
-  top: 200px;
-
   background: #85baa1;
   border-radius: 16px 0px 0px 16px;
   box-shadow: 5px 4px 10px rgba(0, 0, 0, 0.25);
 }
-
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40vw;
+  height: 60vh;
+  background: #ffffff;
+  box-shadow: 5px 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 0 30px 30px 0;
+}
 .text {
   display: flex;
   align-items: center;
@@ -27,13 +34,9 @@
 h1.text {
   font-family: "Poppins";
   font-style: bold;
-  font-weight: 900;
-  font-size: 30px;
-  line-height: 36px;
   color: #ffffff;
-
   word-wrap: break-word;
-  width: 8vw;
+  width: 10vw;
   margin: 20px;
   margin-top: 25vh;
 }
@@ -42,33 +45,18 @@ h2.text {
   font-family: "Poppins";
   font-style: normal;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 21px;
   margin: 20px;
   color: #ffffff;
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 40vw;
-  height: 60vh;
-  left: 256px;
-  top: 200px;
-  background: #ffffff;
-  box-shadow: 5px 4px 10px rgba(0, 0, 0, 0.25);
-  border-radius: 0 30px 30px 0;
+  width: 10vw;
 }
 
 h1.title {
   font-family: "Poppins";
-  font-style: normal;
-  font-weight: 700;
+  font-style: bold;
   font-size: 24px;
   line-height: 36px;
-
   color: #85baa1;
 }
 
@@ -77,7 +65,6 @@ h1.title {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 25vw;
   padding: 20px;
   border-radius: 5px;
 }
@@ -99,13 +86,8 @@ h2.title {
   margin: 10px 0;
 }
 
-.label {
-  display: block;
-  margin-bottom: 5px;
-}
-
 .input {
-  width: 25vw;
+  width: 30vw;
   height: 30px;
   padding: 10px 0 10px 30px;
   font-size: 16px;
@@ -143,7 +125,7 @@ h6.text {
   font-family: "Poppins";
   font-style: normal;
   font-weight: 300;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 15px;
   margin-top: 5px;
   color: #85baa1;
@@ -155,3 +137,163 @@ h6.text:hover {
   background-color: #006080;
   text-decoration: none;
 }
+
+/* applies to x-large devices (large desktops, less than 1400px) */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  h1.text {
+    margin-top: 50%;
+    margin-left: 10%;
+  }
+
+  h1.title {
+    margin-top: 10%;
+    margin-bottom: 1%;
+  }
+
+  .form {
+    padding: 0 20px;
+    margin: 0;
+  }
+
+  h2.title {
+    margin: 0;
+  }
+
+  .formGroup {
+    margin: 5px 0;
+  }
+
+  .input {
+    width: 30vw;
+    height: 25px;
+    padding: 10px 0 10px 30px;
+  }
+
+  .button {
+    padding: 15px 100px;
+    margin-top: 5px;
+    margin-bottom: 2px;
+  }
+
+  h6.text {
+    margin-bottom: 40%;
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  .aside {
+    width: 20vw;
+    height: 80vh;
+  }
+  .container {
+    width: 60vw;
+    height: 80vh;
+  }
+
+  h1.text {
+    margin-top: 30vh;
+    margin-left: 15%;
+    width: 80%;
+  }
+
+  h2.text {
+    margin-left: 15%;
+    width: 80%;
+  }
+
+  h1.title {
+    margin-top: 10%;
+    margin-bottom: 1%;
+  }
+
+  .form {
+    padding: 0 20px;
+    margin: 0;
+  }
+
+  h2.title {
+    margin: 0;
+  }
+
+  .formGroup {
+    margin: 5px 0;
+  }
+
+  .input {
+    width: 30vw;
+    height: 25px;
+    padding: 10px 0 10px 30px;
+  }
+  .button {
+    padding: 15px 100px;
+    margin-top: 5px;
+    margin-bottom: 2px;
+  }
+
+  h6.text {
+    margin-bottom: 40%;
+    font-size: 12px;
+  }
+}
+/* applies to small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+  .page {
+    height: 100vh;
+    width: 100vw;
+    background-color: red;
+  }
+  .aside {
+    display: none;
+  }
+  .container {
+    width: 100vw;
+    height: 100vh;
+    background: #ffffff;
+    border-radius: 0;
+  }
+
+  h1.title {
+    font-family: "Poppins";
+    font-style: bold;
+    font-size: 24px;
+    line-height: 36px;
+    color: #85baa1;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 5px;
+  }
+
+  h2.title {
+    display: flex;
+    text-justify: initial;
+    text-align: initial;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    color: #6e8894;
+    margin-left: 0;
+  }
+
+  .formGroup {
+    margin: 3px 0;
+  }
+
+  .input {
+    width: 60vw;
+    height: 25px;
+    padding: 10px 0 10px 30px;
+  }
+}
+/* applies to x-small devices (portrait phones, less than 576px) */
+/* @media (max-width: 575.98px) {
+
+} */

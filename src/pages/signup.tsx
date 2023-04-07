@@ -86,7 +86,7 @@ const Signup = () => {
             Cadastrar
           </button>
           <Link href="/signin">
-            <h6 className={styles.title}>Já possuí uma conta? Entre!</h6>
+            <h6 className={styles.text}>Já possuí uma conta? Entre!</h6>
           </Link>
         </form>
       </div>

@@ -61,7 +61,7 @@ const Signin = () => {
             Entrar
           </button>
           <Link href="/signup">
-            <h6 className={styles.title}>Não possuí uma conta? Cadastre-se!</h6>
+            <h6 className={styles.text}>Não possuí uma conta? Cadastre-se!</h6>
           </Link>
         </form>
       </div>
