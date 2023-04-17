@@ -10,9 +10,10 @@ const FilterBar: React.FC = () => {
 
   useEffect(() => {
     const fetchGames = async () => {
-      optionSelected === "Todos os jogos" ? "/games" : "/games/available";
       try {
-        const response = await getGames();
+        const response = await getGames(
+          optionSelected === "Todos os jogos" ? "/games" : "/games/available"
+        );
 
         console.log(response);
         setGames(response);
