@@ -60,8 +60,11 @@ const Signin = () => {
           <button type="submit" className={styles.button}>
             Entrar
           </button>
-          <Link href="/signup">
+          <Link href="/signup" style={{ textDecoration: "none" }}>
             <h6 className={styles.text}>Não possuí uma conta? Cadastre-se!</h6>
+          </Link>
+          <Link href="/" style={{ textDecoration: "none" }}>
+            <h6 className={styles.text}>Voltar para Home</h6>
           </Link>
         </form>
       </div>

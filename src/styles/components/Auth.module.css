@@ -146,7 +146,7 @@ h6.text:hover {
   }
 
   h1.title {
-    margin-top: 10%;
+    margin-top: 1%;
     margin-bottom: 1%;
   }
 
@@ -175,8 +175,8 @@ h6.text:hover {
     margin-bottom: 2px;
   }
 
-  h6.text {
-    margin-bottom: 40%;
+  h6.text:last-child {
+    margin-bottom: 2px;
     font-size: 12px;
   }
 }
@@ -232,7 +232,7 @@ h6.text:hover {
   }
 
   h6.text {
-    margin-bottom: 40%;
+    /* margin-bottom: 40%; */
     font-size: 12px;
   }
 }

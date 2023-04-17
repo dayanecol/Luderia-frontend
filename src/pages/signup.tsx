@@ -85,8 +85,11 @@ const Signup = () => {
           <button type="submit" className={styles.button}>
             Cadastrar
           </button>
-          <Link href="/signin">
+          <Link href="/signin" style={{ textDecoration: "none" }}>
             <h6 className={styles.text}>Já possuí uma conta? Entre!</h6>
+          </Link>
+          <Link href="/" style={{ textDecoration: "none" }}>
+            <h6 className={styles.text}>Voltar para Home</h6>
           </Link>
         </form>
       </div>

@@ -74,9 +74,11 @@
   box-sizing: border-box;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: first baseline;
   width: 100%;
-  background-color: #f8f7ff;
+  height: 100%;
+  overflow-y: scroll;
+  background-color: #fff;
 }
 
 .games_content {
@@ -87,6 +89,9 @@
   width: 60%;
   flex-wrap: wrap;
   padding: 20px;
+  margin-top: 50px;
+  margin-bottom: 150px;
+  background-color: #f8f7ff;
 }
 
 .game_card {
@@ -95,7 +100,42 @@
   align-items: center;
   width: 200px;
   height: 200px;
-  background-color: aqua;
+  background-color: #ceeddb;
   margin: 10px;
   padding: 10px;
+}
+
+.game_card h2 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  color: #544e61;
+}
+
+.game_card p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+  color: #544e61;
+}
+
+.game_card p:last-child {
+  background-color: red;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  padding: 4px;
+  cursor: none;
+  color: #fff;
+}
+
+.game_card p:last-child.disponivel {
+  background-color: #85baa1;
+  cursor: pointer;
+}
+
+.game_card p:last-child:hover {
+  background-color: #006080;
 }

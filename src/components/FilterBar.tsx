@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { getGames } from "../utils/games";
 import styles from "../styles/components/Game.module.css";
+import Link from "next/link";
 
 const FilterBar: React.FC = () => {
   const [games, setGames] = useState<Game[]>([]);
@@ -69,7 +70,14 @@ const FilterBar: React.FC = () => {
               <div className={styles.game_card} key={game.id}>
                 <h2>{game.title}</h2>
                 <p>{`Preço: R$ ${game.price.toFixed(2)}`}</p>
-                <p>{game.quantity > 0 ? "Disponível" : "Indisponível"}</p>
+                <p className={game.quantity > 0 ? styles.disponivel : ""}>
+                  <Link
+                    href={game.quantity > 0 ? "/signup" : ""}
+                    style={{ textDecoration: "none" }}
+                  >
+                    {game.quantity > 0 ? "Disponível" : "Indisponível"}
+                  </Link>
+                </p>
               </div>
             ))}
         </div>
