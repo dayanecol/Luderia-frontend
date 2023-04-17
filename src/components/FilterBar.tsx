@@ -73,7 +73,7 @@ const FilterBar: React.FC = () => {
                 <p>{`Preço: R$ ${game.price.toFixed(2)}`}</p>
                 <p className={game.quantity > 0 ? styles.disponivel : ""}>
                   <Link
-                    href={game.quantity > 0 ? "/signup" : ""}
+                    href={game.quantity > 0 ? "/rentals" : ""}
                     style={{ textDecoration: "none" }}
                   >
                     {game.quantity > 0 ? "Disponível" : "Indisponível"}
