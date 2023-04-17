@@ -180,7 +180,7 @@ h6.text:hover {
     font-size: 12px;
   }
 }
-
+/* applies to medium devices (tablets, less than 992px) */
 @media (min-width: 768px) and (max-width: 1199.98px) {
   .aside {
     width: 20vw;
@@ -293,7 +293,3 @@ h6.text:hover {
     padding: 10px 0 10px 30px;
   }
 }
-/* applies to x-small devices (portrait phones, less than 576px) */
-/* @media (max-width: 575.98px) {
-
-} */
